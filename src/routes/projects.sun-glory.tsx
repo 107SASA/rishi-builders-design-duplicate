@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { useSwipe } from "@/hooks/use-swipe";
 
 const HERO_IMAGES = [
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAnz1KsaHXn8dJdl2k5yVepM1QUGBA6DvTYzsyd8Bk_Qgfp-77GOcqVHAKiYQvvm_tyVxefvav_bLdrELkY7KxLeIluT7MNTQBETBNxF0ESBK-JjycHhGE0ahA9njB70NQNu9Ead7rv0OoY4y50vrxbm7hab0JevuV3dTWZaoHs76O01YDjhwy0aX9dobV8QdBsVAtNj3Ju5aMKaDxCaxoW9tyoMRATXnZ9BraLo_u3NYW270fCE5TiIg",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDVQI_Wm-lyQA_TmuX68H8CoJ-Mek2d4DLEuWEnhAZSMjBJFM0UDehDMcYVhcWyShe_MCdm_wesVb8kGV9tPbMIgpR8frkg1bcD15DH7pZC_RXe0V6QtB8BBQlpAU366WX1WYXoesnpxcBAIZMZOTOhsxGq6XuAZcKzL3n_G28MA9ShALW9wUkglVI3Ve0DeKh9SaHruV2COvR1zcsp2uaRiwFQ0eacw6tQnnWhKrmxRxnPGwe5lxUOkQ",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAzAqGFfr5lKC9KL_zJJfsG6fgMTT0CqlKp2-HlVKyTHw3T11PCRb2LjcOnbkGm5q4AqUJF3Iha5lAn10kJ4FwtXGDPAOozuixaWEI9vwqCJcxzMogAN5AVHRFVC3SbH3R9aQGwyB3nsHHMq4xU-LUj9DHYBwUC7PNjUWgj0eW_A02UhtDx3RCo2syD26v-TZy2w_JokAt9q3usrVK5cj6lZC3hrY5em0kjcuPCcxG0qjHM3HXwQ-kvww"
+  "https://images.unsplash.com/photo-1580041065738-e72023775cdc?auto=format&fit=crop&w=2400&q=80",
+  "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=2400&q=80",
+  "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2400&q=80"
 ];
 
 const AMENITIES = [
@@ -26,15 +26,15 @@ const AMENITIES = [
 const GALLERY = [
   {
     "alt": "Living Room",
-    "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuD_Z08Zzb7rYH7w18lCcLUdTmJLkchoiXZBPhprKhzO6jgIIbX_5Wo751dEUjeKvL7-yFlGkOK3cBACP48wWAbI7lj7yOoNuFRUcyf8ypdIw3wsGFC5f9YIXNJCVW661G2r34-6zrVR57I_vaaFRYBCnVNoFVf42utJSXuUUxYN617fKbn_OTZDAO1__CbU6WIoPNE75OX-WMi8OYkYVlJHDNVuFVQjINwLvQDHkptlsPB2YvT-RFAkTA"
+    "src": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80"
   },
   {
     "alt": "Exterior View",
-    "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDDJk6ePrMdWyhwHeuvBTGO_geuNgNCrVLEtNA-A6n0n0yIk5Iykea_T_PF2PvMaVasbQv1ZHRKXtUVQg0I-1EnH1kzQ8GPBtysoLZJY_-7DeK3bAcjbQDckKvqmVZpx76BpcqUN5v44rR-i46UDh0GKD9iX1emaM9Vr3LwtfmJbX7fKhzaxKYkT8B0_XyQW9XNbZweitAUrajsPEsRRMFZCPplz_eWsXnmLh78Mb0XsnhOpOiVqnobD5aFPBVzqvt3G80"
+    "src": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2000&q=80"
   },
   {
-    "alt": "Atrium Lobby",
-    "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuD1qnKxmswsX1lJOHcJdqU5s9OOO1UeFNUvPcOIwZLPsHRYl8EVpxeOoOAsKMtY2VVp5E2n2J9u4dysI0F34ey0WCS8U6yh-sraockbuobEVbWQh0a7x495QE2vKeH7W0sGWeg6HKiVXNSf7BQsW9jghX-VVV4mfxmdHENBQoo73CDRZW2H7Aag2ZlpGt1hVPfQMcf0vEq1KzSrHYZicO7a4nUTiLaAHkjHXk_pSKWv7dnCFus4vZaelA"
+    "alt": "Master Bedroom",
+    "src": "https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=2000&q=80"
   }
 ];
 
@@ -101,7 +101,7 @@ function SunGloryPage() {
 {/* First Editorial Section */}
 <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2 items-center mt-section-gap">
 <div className="h-[320px] md:h-[600px] overflow-hidden slide-in-left visible">
-<img alt="Luxury Project Exterior" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvnedKxHhXdr_UrnYhLW6qQIk-nwjMwPNam-o5ScHCz7Wasug3VWBdPbSJThVma8UUphjyGGQ7RhT2OBDcb8L5Yvc4UORj30MlWm7BabpTV8C6FOtvwat3o9_T_Hx8rLDlUh3tJX70H093FBRJBrMcgQnmqJAIQQ2kDq8szHWgqBzMtmHowbPfdHPGaN9dw38BZg6WkzMcBaBOcccTbhCpV0qUeg_C1n7Hs8oi3uvx1S1uH-jtvnCW8jhfEeWvaYv2rMI" />
+<img alt="Luxury Project Exterior" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=2000&q=80" />
 </div>
 <div className="px-6 py-12 sm:p-12 lg:p-24 flex flex-col justify-center slide-in-right visible">
 <h2 className="font-headline-xl text-headline-xl text-ink mb-8">Experience True Luxury at Lokmanya Nagar</h2>
@@ -113,7 +113,7 @@ function SunGloryPage() {
 </div>
 {/* Second Editorial Section */}
 <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2 items-center bg-surface-container-low"><div className="h-[320px] md:h-[600px] overflow-hidden lg:order-2">
-<img alt="Architectural Detail" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbnU9LOU2EF4KbwEziSrLn1xjtteGn0BY6vOIH5wyowtxu8F019Fxxm-oZiFaqB2Wc-L6q6BaREb9EWp5omVjZnZw06APTfoIht19OklxNOdE19042CcP1XdV01ObrRcBhAsiEHQWFgnCy5l2ypVSp2cDn5Qf3C_Z-FvH1bvUIumPqmnnpzuos99WXcW7BluD9fKWyPPQazZSmSrse33Ie3LplwaBn60UTzh9lHQKXSmZ4l5e8kEo6b1SKTHHmWMnHatTTdb0RSlEQRIk" />
+<img alt="Architectural Detail" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80" />
 </div><div className="px-6 py-12 sm:p-12 lg:p-24 flex flex-col justify-center lg:order-1">
 <h2 className="font-headline-xl text-headline-xl text-ink mb-8">Architectural Excellence</h2>
 <div className="w-16 h-[1px] bg-secondary mb-8"></div>
@@ -209,7 +209,7 @@ referrerPolicy="strict-origin-when-cross-origin"
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 {/* Left: Image */}
 <div className="bg-white p-4 shadow-sm border border-outline-variant/10">
-<img alt="3 BHK Luxury Floor Plan" className="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHAfs2A-SHCMw0LYAKif6PvPi1vjU1t0Ok15RbprNBgb4Wz--M5aM3-RXmhl2zkpr7rujkqng877aYuStoCpafXAERH_hQK-pSRCAfPQZbDhJMMn6A9kFtzwBBObWLV3eCk2ZWQkGcTAI0Pefm1lEptCo1m8FA5MNB_PQq0JawU15bOw0wwtMpNV2rrOFCmcdoqqEDe-F8lR1JKuYZLTYjjlbBXg0YzD-LKsclVhagPmNLwLUUk3DNyw" />
+<img alt="3 BHK Luxury Floor Plan" className="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHAfs2A-SHCMw0LYAKif6PvPi1vjU1t0Ok15RbprNBgb4Wz--M5aM3-RXmhl2zkpr7rujkqng877aYuStoCpafXAERH_hQK-pSRCAfPQZbDhJMMn6A9kFtzwBBObWLV3eCk2ZWQkGcTAI0Pefm1lEptCo1m8FA5MNB_PQq0JawU15bOw0wwtMpNV2rrOFCmcdoqqEDe-F8lR1JKuYZLTYjjlbBXg0YzD-LKsclVhagPmNLwLUUk3DNyw=s2400" />
 </div>
 {/* Right: Details */}
 <div className="flex flex-col">
@@ -243,7 +243,7 @@ REQUEST BROCHURE
 </div>
 </div>
 </div>
-</section><section className="py-16 md:py-section-gap bg-background overflow-hidden" id="location"><div className="max-w-7xl mx-auto px-6 md:px-container-padding"><div className="text-center mb-16"><p className="font-label-caps text-label-caps text-secondary mb-2 uppercase tracking-widest">DISCOVER THE NEIGHBORHOOD</p><h2 className="font-headline-xl text-headline-xl text-ink mb-4">Strategic Location</h2><div className="w-24 h-[1px] bg-secondary mx-auto"></div></div><div className="mb-16 rounded-xl overflow-hidden shadow-2xl border border-outline-variant/20"><img alt="Strategic Location Map" className="w-full h-[280px] md:h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsbpawNQb92x8dlWbalPtyTyteh6ksFWQTLFaQY96S9nUmqo8D3hNiRs9CrArvp4bu4OPwQQSDPEH7GdNmyiL1duLXOgtUEA8iA9YjaJ5Nrhb4geG5YcQsWYIiUUBFm98wrdbcWVocw6onoLbxQes-FLTXjJDcyBNY-SDMuSoB37300AZOk_jnGcMMFGQUpb39R6c5KjhJy7LMOZ_YwvnO4991pZ3JRFnKJ98KPjwY8nm3VdgcIjJU3_efu" /></div></div></section>
+</section><section className="py-16 md:py-section-gap bg-background overflow-hidden" id="location"><div className="max-w-7xl mx-auto px-6 md:px-container-padding"><div className="text-center mb-16"><p className="font-label-caps text-label-caps text-secondary mb-2 uppercase tracking-widest">DISCOVER THE NEIGHBORHOOD</p><h2 className="font-headline-xl text-headline-xl text-ink mb-4">Strategic Location</h2><div className="w-24 h-[1px] bg-secondary mx-auto"></div></div><div className="mb-16 rounded-xl overflow-hidden shadow-2xl border border-outline-variant/20"><iframe title="Location map" className="w-full h-[280px] md:h-[500px] border-0 block" src="https://www.google.com/maps?q=Lokmanya%20Nagar%2C%20Sadashiv%20Peth%2C%20Pune&z=15&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></div></div></section>
 {/* Location Section */}
 </main>
 {/* Footer */}

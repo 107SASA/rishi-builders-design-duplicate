@@ -3,16 +3,16 @@ import { useEffect, useState } from "react";
 import { useSwipe } from "@/hooks/use-swipe";
 
 const HERO_IMAGES = [
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDnBsZy6XNkD6qQOnL6XBfD2QQrpJCodIB6oC1o1smocrBPFPvG69oJfbcB3h_bXazTJht0kGQm3LHnP_fkGvHCR6ymH2srj_mUIWopMU-GSNxSdynqyhZqfS8pYxdGF0TgKG026G0UXJ7vC409bbvTs5li8dwjNrVMdhSCKPVvrG66wYFfDVFi4UDjO396t3WG1QFvajiFCLS4Avvu1sVpWwW09wOMh60IjbvB7qKBdqg3zOg0aTO9kw",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuANLb92m0lQF-c7XrRkXYK69GKSW4v_MvATte4zkuCw_EQjpjKwH9xjktM2KuXlaN9KranAexm-tRQ7vSxxqe8_SCcXK04MXckhFPSH1hf1MkBINSSqDjPfyAzc_Cba5VCnBRGRW61QuEwjQ6ko86t-55rRIV-5BXPGZ8HNBKaiW0dm5gQtEhtculGrGcBSp4TRj43nwDa0OOFa0FvGbrkQgzSGDMvFg3_bmDB5jjaoU17r5puoBQSZ2w",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBzUpBFeMd6hFt-VYk67wVUJ-jEgN96k0ojijWbzZlk3SfIewJwAPlewVg-6sr8QOeJRnKqZjK4JC0wgoNbVlkQINBnf8-iDc-9qqh5QV3cEKmt6IRYuTJcNu9ljomB7O9ks_LF1k046VD8whFWdq5aL2t25Rn1_t78v_CkMqJYfWVBDtpW0QoaXHKE8V0qbCYoH563aGGCuQW-C3rIRRdreCfvPaJwNDcofPRJOtBxXL-bjy7m49B9cg",
+  "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2400&q=80",
+  "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=2400&q=80",
+  "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=2400&q=80",
 ];
 
 const ABOUT_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCvnedKxHhXdr_UrnYhLW6qQIk-nwjMwPNam-o5ScHCz7Wasug3VWBdPbSJThVma8UUphjyGGQ7RhT2OBDcb8L5Yvc4UORj30MlWm7BabpTV8C6FOtvwat3o9_T_Hx8rLDlUh3tJX70H093FBRJBrMcgQnmqJAIQQ2kDq8szHWgqBzMtmHowbPfdHPGaN9dw38BZg6WkzMcBaBOcccTbhCpV0qUeg_C1n7Hs8oi3uvx1S1uH-jtvnCW8jhfEeWvaYv2rMI";
+  "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=2000&q=80";
 
-const LOCATION_IMG =
-  "https://lh3.googleusercontent.com/aida/AP1WRLsbpawNQb92x8dlWbalPtyTyteh6ksFWQTLFaQY96S9nUmqo8D3hNiRs9CrArvp4bu4OPwQQSDPEH7GdNmyiL1duLXOgtUEA8iA9YjaJ5Nrhb4geG5YcQsWYIiUUBFm98wrdbcWVocw6onoLbxQes-FLTXjJDcyBNY-SDMuSoB37300AZOk_jnGcMMFGQUpb39R6c5KjhJy7LMOZ_YwvnO4991pZ3JRFnKJ98KPjwY8nm3VdgcIjJU3_efu";
+const LOCATION_MAP =
+  "https://www.google.com/maps?q=Pune%2C%20Maharashtra&z=11&output=embed";
 
 export const Route = createFileRoute("/projects/land")({
   head: () => ({
@@ -116,7 +116,7 @@ function LandProjectPage() {
               <div className="w-24 h-[1px] bg-secondary mx-auto"></div>
             </div>
             <div className="mb-10 rounded-xl overflow-hidden shadow-2xl border border-outline-variant/20">
-              <img alt="Strategic Location Map" className="w-full h-[280px] md:h-[500px] object-cover" src={LOCATION_IMG} />
+              <iframe title="Location map" className="w-full h-[280px] md:h-[500px] border-0 block" src={LOCATION_MAP} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
             </div>
             <div className="flex justify-center">
               <button
