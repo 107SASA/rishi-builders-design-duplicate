@@ -1,0 +1,187 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@theme {
+  /* ── Brand palette: Oxford & Gold (royal navy + champagne gold) ── */
+  --color-brand-blue: #1a4584;      /* logo "RISHI" blue: kept only for the logo itself */
+  --color-brand-blue-dark: #133566;
+  --color-navy: #0a192f;            /* Oxford navy: hero, page banners, dark surfaces */
+  --color-navy-deep: #061223;
+  --color-navy-card: #10233f;       /* navy card surface */
+  --color-gold: #c5a059;            /* champagne gold: buttons, rules, accents */
+  --color-gold-light: #e6cf9e;      /* gold text on navy */
+  --color-gold-dark: #ad8a42;       /* gold hover */
+  --color-gold-deep: #ad8a42;       /* small caps labels on light surfaces */
+  --color-brand-red: #bf435f;       /* logo underline accent */
+  --color-sky: #f1ede3;
+  --color-ivory: #faf8f3;
+  --color-cream: #f1ede3;
+
+  /* ── Neutrals (warm ivory + navy ink) ── */
+  --color-ink: #0f1e33;
+  --color-body: #1a273a;
+  --color-muted: #535e70;
+  --color-on-dark-soft: #e6cf9e;
+  --color-hairline: #e8e1d3;
+  --color-hairline-strong: #d6ccb8;
+  --color-surface-soft: #f1ede3;
+  --color-surface-strong: #ebe5d8;
+
+  /* ── Theme roles ── */
+  /* Primary is champagne gold: CTAs, nav hover/underline, focus borders */
+  --color-primary: #c5a059;
+  --color-primary-active: #ad8a42;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #0a192f;
+  --color-on-primary-container: #e6cf9e;
+  --color-primary-fixed: #f1e6cc;
+  --color-primary-fixed-dim: #e6cf9e;
+  --color-on-primary-fixed: #0a192f;
+  --color-on-primary-fixed-variant: #ad8a42;
+  --color-inverse-primary: #e6cf9e;
+  --color-surface-tint: #c5a059;
+  --color-primary-foreground: #ffffff;
+
+  /* Secondary is the gold accent for labels, icons and small rules */
+  --color-secondary: #c5a059;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #f1e6cc;
+  --color-on-secondary-container: #0a192f;
+  --color-secondary-fixed: #e6cf9e;      /* light gold text on navy */
+  --color-secondary-fixed-dim: #e6cf9e;
+  --color-on-secondary-fixed: #0f1e33;
+  --color-on-secondary-fixed-variant: #1a273a;
+
+  /* Tertiary drives the footers: warm ivory surface, navy text, gold trim */
+  --color-tertiary: #f4efe6;
+  --color-on-tertiary: #1a273a;
+  --color-tertiary-container: #f4efe6;
+  --color-on-tertiary-container: #535e70;
+  --color-tertiary-fixed: #f1ede3;
+  --color-tertiary-fixed-dim: #e8e1d3;
+  --color-on-tertiary-fixed: #0f1e33;
+  --color-on-tertiary-fixed-variant: #c5a059;
+
+  --color-background: #faf8f3;
+  --color-on-background: #0f1e33;
+  --color-foreground: #0f1e33;
+  --color-surface: #faf8f3;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #d6ccb8;
+  --color-surface-variant: #f1ede3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f1ede3;
+  --color-surface-container: #ebe5d8;
+  --color-surface-container-high: #ebe5d8;
+  --color-surface-container-highest: #e8e1d3;
+  --color-on-surface: #0f1e33;
+  --color-on-surface-variant: #535e70;
+  --color-inverse-surface: #0a192f;
+  --color-inverse-on-surface: #ffffff;
+  --color-muted-foreground: #535e70;
+  --color-accent: #f1ede3;
+  --color-input: #d6ccb8;
+
+  --color-outline: #948a78;
+  --color-outline-variant: #d6ccb8;
+
+  --color-error: #c62828;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  --spacing-gutter: 24px;
+  --spacing-section-gap: clamp(64px, 40px + 6vw, 120px);   /* 64px on phones, 120px on desktop */
+  --spacing-margin-md: 32px;
+  --spacing-margin-lg: clamp(32px, 24px + 2vw, 48px);
+  --spacing-margin-sm: 16px;
+  --spacing-container-padding: 64px;
+
+  --font-headline-lg: "Libre Caslon Text", serif;
+  --font-headline-xl: "Libre Caslon Text", serif;
+  --font-display-lg: "Libre Caslon Text", serif;
+  --font-display-lg-mobile: "Libre Caslon Text", serif;
+  --font-nav-link: "Hanken Grotesk", sans-serif;
+  --font-body-lg: "Hanken Grotesk", sans-serif;
+  --font-body-md: "Hanken Grotesk", sans-serif;
+  --font-label-caps: "Hanken Grotesk", sans-serif;
+
+  --text-headline-lg: clamp(24px, 20px + 1.2vw, 32px);
+  --text-headline-lg--line-height: 1.3;
+  --text-headline-lg--font-weight: 400;
+  --text-headline-xl: clamp(30px, 22px + 2.6vw, 48px);
+  --text-headline-xl--line-height: 1.2;
+  --text-headline-xl--letter-spacing: 0.05em;
+  --text-headline-xl--font-weight: 400;
+  --text-nav-link: 15px;
+  --text-nav-link--line-height: 1.2;
+  --text-nav-link--font-weight: 500;
+  --text-body-lg: clamp(16px, 15px + 0.3vw, 18px);
+  --text-body-lg--line-height: 1.6;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.6;
+  --text-display-lg: clamp(42px, 28px + 3.6vw, 64px);
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg-mobile: 42px;
+  --text-display-lg-mobile--line-height: 1.2;
+  --text-label-caps: 14px;
+  --text-label-caps--line-height: 1.2;
+  --text-label-caps--letter-spacing: 0.15em;
+  --text-label-caps--font-weight: 600;
+}
+
+@layer base {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: var(--font-body-md);
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+      "FILL" 0,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+  }
+}
+
+@utility full-width {
+  width: 100%;
+}
+
+/* Gold trim under the header and above the footers */
+@utility brand-rule {
+  background-color: var(--color-gold);
+}
+
+/* Oxford-navy page banner used at the top of inner pages */
+@utility page-banner {
+  background-color: var(--color-navy);
+}
+
+/* Two-column card grids: centre a lone last card instead of leaving it hanging left */
+@media (width >= 40rem) and (width < 64rem) {
+  .center-orphan > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 1rem);
+  }
+}
